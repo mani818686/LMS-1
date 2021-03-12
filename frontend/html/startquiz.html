@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="LMS.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="LMS">
+    <meta name="author" content="Lms.in">
+    <title>LMS STUDENT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/startquiz.css" />
+</head>
+
+<body>
+    <nav class="navbar" style="background-color:white !important;box-shadow:0 6px 10px 0 rgba(0, 0, 0, 0.19);text-align: center;"><a class="navbar-brand" href="/dashboard"><img src="https://img.icons8.com/emoji/48/000000/man-student.png" style="width:40px;height:40px;margin-left:50%;margin-top:-1em;" alt="LMS" /></a><span class="navbar-brand mb-0 h1" style="margin-left:3%;">LMS STUDENT</span>
+        <div class="nav-item nav-link ml-auto" style="font-size:110%;font-family:Arial, Helvetica, sans-serif;"><b id="username">Welcome</b></div>
+        <button type="button" class="btn btn-warning" onclick="logout()">Logout</button>
+      </nav>
+ <div class="container">
+   
+<div class="row" style="margin-top: 10%;margin-left: 10%;">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div id="question">
+            <h4 class="qno"></h4>
+            <p class="description"></p>
+        </div>
+        <div id="answers">
+            <ul  >
+                <li onclick="check('A')" ><span>A</span> <p class="op1"> options[QuestionNo-1][0]</p></li>
+                <li onclick="check('B')" ><span>B</span> <p class="op2"> options[QuestionNo-1][1]</p></li>
+                <li  onclick="check('C')" ><span>C</span> <p class="op3"> options[QuestionNo-1][2]</p></li>
+                <li  onclick="check('D')" ><span>D</span> <p class="op4"> options[QuestionNo-1][3]</p></li>
+            </ul>
+        </div>
+        <div id="submit">
+            <button class="fancy-btn"  onclick="next()" > Next question </button>
+        </div>
+    </div>
+    <div class="modal fade" id="ResultModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" style="max-width:40%;vertical-align: middle;">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="result"></div>
+                <h5 class="score" style="text-align:center"> Are You Sure You Want To Submit This Quiz ?</h5>
+                <div class="Restart d-flex justify-content-center "></div>
+              </div>
+              <div class=" row d-flex justify-content-center mb-1 mt-1">
+                <div class=" dis col-6 ml-5">
+                <button class="btn" style="margin-right:15%;background-color:#F64E0F;color:white" type="button" onclick="showMarks()">Yes</button>
+                <button class="btn btn-primary" type="button" data-dismiss="modal">No</button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/startquiz.js"></script>
+</body>
+
+</html>
